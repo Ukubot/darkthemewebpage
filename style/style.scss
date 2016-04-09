@@ -1,0 +1,157 @@
+$background-color: #272727;
+$menu-color: #444;
+$menu-color-hover: #555;
+
+
+/*MAIN CSS*/
+
+body {
+  background-color: $background-color;
+}
+
+
+
+// CONTAINERS
+
+.content-wrap {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+// NAVBAR
+
+.nav-bar span.nav-handle:before, .nav-bar span.nav-handle:after, .nav-bar span.nav-handle span {
+    background: $menu-color;
+}
+
+.nav-bar span.nav-handle span {
+    height: 2px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 12px;
+    width: 100%;
+    top: 50%;
+    margin-top: -1px;
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+}
+
+.nav-bar span.nav-handle:before {
+    -webkit-transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0);
+}
+
+.nav-bar span.nav-handle:after {
+    -webkit-transform: translate3d(0, 6px, 0);
+    transform: translate3d(0, 6px, 0);
+}
+
+.nav-bar span.nav-handle span {
+    height: 2px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 12px;
+    width: 100%;
+    top: 50%;
+    margin-top: -1px;
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+}
+
+.nav-bar span.nav-handle:before, .nav-bar span.nav-handle:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: -webkit-transform 0.45s;
+    transition: transform 0.45s;
+}
+
+.nav-bar span.nav-handle {
+    height: 20px;
+    outline: medium none;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 20px;
+}
+
+.sidenav-wrap {
+  position: fixed;
+  left: 0px;
+  top: 0px !important;
+  width: 30%;
+  height: 100%;
+  z-index: 21;
+}
+
+.nav-bar {
+  float: left;
+  height: 60px;
+  width: 60px;
+  position: relative;
+  text-align: center;
+  top: 20px;
+  left: -20px;
+  opacity: 0;
+}
+
+.nav-bar span.nav-handle {
+    height: 30px;
+    outline: medium none;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+}
+
+.nav-handle:hover {
+  cursor: pointer;
+  .nav-bar span.nav-handle:before, .nav-bar span.nav-handle:after, .nav-bar span.nav-handle span {
+      background: red;
+  }
+}
+
+#Ukubot {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    margin: -125px 0px 0px -300px;
+    z-index: 10;
+    opacity: 0;
+}
+
+// TEXTS
+h1 {
+  text-align: center;
+  font-size: 10em;
+  color: $menu-color-hover;
+}
+
+h1 span {
+  text-align: center;
+  color: $background-color;
+  background-color: $menu-color-hover;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #00d9ae;
+}
