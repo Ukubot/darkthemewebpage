@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Commit Checker</title>
-  <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
   <script src="compiled/js/jquery.min.js"></script>
   <script src="compiled/js/app.min.js"></script>
   <script src="compiled/js/myscript.min.js"></script>
@@ -12,15 +11,31 @@
 </head>
 <body>
   <div class="content-wrap">
+    <div class="site-mask">
+    </div>
     <div class="sidenav-wrap">
       <span class="nav-bar" href="#" style="opacity: 1; left: 20px;">
-        <span class="nav-handle">
+        <div class="nav-handle">
           <span></span>
-        </span>
+          <span></span>
+          <span></span>
+        </div>
       </span>
+      <div id="sidemenu-wrap">
+        <ul id="tabmenu">
+          <li class="sidemenu-li">
+            <a href="#">Click me</a>
+          </li>
+          <li class="sidemenu-li">
+            <a href="#">Or me</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div id="Ukubot" style="opacity:1;">
-      <h1>F<span>Uku</span></h1>
+    <div class="middle-content">
+      <div id="Ukubot" style="opacity:1;">
+        <h1>F<span>Uku</span></h1>
+      </div>
     </div>
   </div>
 </body>

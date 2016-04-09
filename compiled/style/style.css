@@ -9,67 +9,17 @@ body {
   width: 100%;
   height: 100%; }
 
-.nav-bar span.nav-handle:before, .nav-bar span.nav-handle:after, .nav-bar span.nav-handle span {
-  background: #444; }
-
-.nav-bar span.nav-handle span {
-  height: 2px;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 12px;
-  width: 100%;
-  top: 50%;
-  margin-top: -1px;
-  -webkit-transition: opacity 0.25s;
-  transition: opacity 0.25s; }
-
-.nav-bar span.nav-handle:before {
-  -webkit-transform: translate3d(0, -8px, 0);
-  transform: translate3d(0, -8px, 0); }
-
-.nav-bar span.nav-handle:after {
-  -webkit-transform: translate3d(0, 6px, 0);
-  transform: translate3d(0, 6px, 0); }
-
-.nav-bar span.nav-handle span {
-  height: 2px;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 12px;
-  width: 100%;
-  top: 50%;
-  margin-top: -1px;
-  -webkit-transition: opacity 0.25s;
-  transition: opacity 0.25s; }
-
-.nav-bar span.nav-handle:before, .nav-bar span.nav-handle:after {
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  left: 0;
-  top: 50%;
-  -webkit-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-transition: -webkit-transform 0.45s;
-  transition: transform 0.45s; }
-
-.nav-bar span.nav-handle {
-  height: 20px;
-  outline: medium none;
-  padding: 0;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  width: 20px; }
+.middle-content {
+  height: 100vh;
+  width: 900px;
+  padding-left: 30%;
+  top: 0px; }
 
 .sidenav-wrap {
   position: fixed;
   left: 0px;
   top: 0px !important;
-  width: 30%;
+  width: 20%;
   height: 100%;
   z-index: 21; }
 
@@ -81,21 +31,83 @@ body {
   text-align: center;
   top: 20px;
   left: -20px;
-  opacity: 0; }
+  opacity: 1; }
 
-.nav-bar span.nav-handle {
-  height: 30px;
-  outline: medium none;
-  padding: 0;
+.nav-handle {
+  margin: 15px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px; }
+  .nav-handle .nav-handle:hover {
+    background-color: #666; }
+  .nav-handle span {
+    background: #555;
+    display: block;
+    width: 40px;
+    height: 3px;
+    border-radius: 0px;
+    margin-bottom: 5px;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.3s linear; }
+  .nav-handle.open span:nth-child(1), .nav-handle.open span:nth-child(3) {
+    transform: translate(0px, 13px) rotate(-45deg) scalex(1);
+    margin: 0; }
+  .nav-handle.open span:nth-child(2) {
+    transition-duration: 0s;
+    margin: 0;
+    opacity: 0; }
+  .nav-handle.open span:nth-child(3) {
+    transform: translate(0px, 9px) rotate(45deg) scalex(1); }
+
+#sidemenu-wrap {
+  font-size: 1.5em;
+  top: 70px;
+  position: relative;
+  padding: 0px;
+  opacity: 1;
+  z-index: 29;
+  width: 100%; }
+
+#sidemenu-wrap > ul {
+  position: relative;
+  padding: 0px 0px 0px 35px;
+  width: 100%;
+  top: -45px;
+  clear: both;
+  transition: all .3s ease-in-out; }
+
+.sidemenu-li {
+  opacity: 0;
+  cursor: pointer;
+  transition: all .3s ease-in-out; }
+
+.sidemenu-li:hover {
+  color: #666; }
+
+ul, li {
+  color: #555;
+  list-style: none;
+  list-style-type: none; }
+
+ul, menu, dir {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px; }
+
+.site-mask {
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
   position: absolute;
-  right: 20px;
-  top: 20px;
-  width: 40px; }
-
-.nav-handle:hover {
-  cursor: pointer; }
-  .nav-handle:hover .nav-bar span.nav-handle:before, .nav-handle:hover .nav-bar span.nav-handle:after, .nav-handle:hover .nav-bar span.nav-handle span {
-    background: red; }
+  background: rgba(24, 24, 24, 0.5);
+  z-index: 20;
+  transition-duration: 1s; }
 
 #Ukubot {
   position: fixed;
@@ -105,6 +117,9 @@ body {
   margin: -125px 0px 0px -300px;
   z-index: 10;
   opacity: 0; }
+
+.active {
+  opacity: 1 !important; }
 
 h1 {
   text-align: center;
@@ -118,10 +133,18 @@ h1 span {
 
 a {
   text-decoration: none;
-  color: black; }
+  color: #555; }
 
 a:hover {
   text-decoration: none;
-  color: #00d9ae; }
+  color: #666; }
+
+a:active {
+  text-decoration: none;
+  color: #666; }
+
+a:focus {
+  text-decoration: none;
+  color: #666; }
 
 /*# sourceMappingURL=style.css.map */
